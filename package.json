@@ -1,0 +1,17 @@
+{
+  "name": "managed-personal-homepage",
+  "version": "1.0.0",
+  "description": "A managed personal homepage with an admin dashboard for editing all public profile content.",
+  "private": true,
+  "scripts": {
+    "start": "node server.js",
+    "test": "node scripts/validate-content.js"
+  },
+  "keywords": [
+    "personal-homepage",
+    "admin-dashboard",
+    "portfolio"
+  ],
+  "author": "",
+  "license": "MIT"
+}

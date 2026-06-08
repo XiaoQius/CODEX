@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="支持后台管理的个人主页和作品集系统。" />
+    <title>个人主页</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container navbar">
+        <a class="brand" href="#home" aria-label="返回首页">
+          <img class="logo" data-logo alt="站点 LOGO" />
+          <span data-site-name>个人主页</span>
+        </a>
+        <nav class="nav-links" data-nav aria-label="主导航"></nav>
+        <a class="admin-link" href="admin.html">后台管理</a>
+      </div>
+    </header>
+
+    <main id="home" class="container">
+      <section class="hero">
+        <div>
+          <div class="eyebrow" data-eyebrow></div>
+          <h1 data-headline></h1>
+          <p class="lead" data-description></p>
+          <div class="hero-actions">
+            <a class="btn" data-primary-cta href="#works"></a>
+            <a class="btn secondary" data-secondary-cta href="admin.html"></a>
+          </div>
+        </div>
+        <aside class="profile-card" aria-label="个人资料卡片">
+          <img class="avatar" data-avatar alt="头像" />
+          <h2 data-nickname></h2>
+          <p class="profile-title" data-title></p>
+          <p class="location" data-location></p>
+          <p class="bio" data-bio></p>
+          <ul class="tags" data-tags></ul>
+          <div class="stats" data-stats></div>
+        </aside>
+      </section>
+
+      <section class="section split" id="skills">
+        <div class="panel">
+          <div class="eyebrow">能力矩阵</div>
+          <h2>技能与服务方向</h2>
+          <p>后台可以随时维护标签，让访客快速理解你的核心能力。</p>
+        </div>
+        <div class="panel">
+          <ul class="skills-list" data-skills></ul>
+        </div>
+      </section>
+
+      <section class="section" id="works">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">精选作品</div>
+            <h2>可由后台维护的作品集</h2>
+          </div>
+          <p>作品标题、分类、封面、简介和链接都支持编辑。</p>
+        </div>
+        <div class="work-grid" data-works></div>
+      </section>
+
+      <section class="section split" id="timeline">
+        <div class="panel">
+          <div class="eyebrow">经历</div>
+          <h2>职业时间线</h2>
+          <p>用结构化内容展示你的成长路径、项目经验或服务流程。</p>
+        </div>
+        <div class="panel timeline" data-timeline></div>
+      </section>
+
+      <section class="section" id="contact">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">联系合作</div>
+            <h2>让机会找到你</h2>
+          </div>
+          <p>后台统一维护邮箱、电话、微信与社交链接。</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-card"><span>邮箱</span><a data-email-link><strong data-email></strong></a></div>
+          <div class="contact-card"><span>电话</span><strong data-phone></strong></div>
+          <div class="contact-card"><span>微信</span><strong data-wechat></strong></div>
+        </div>
+        <div class="tags" data-socials style="margin-top:16px"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">© <span data-site-name>个人主页</span>. Powered by managed homepage system.</div>
+    </footer>
+  </body>
+</html>
