@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>后台管理 - 个人主页</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="admin.js"></script>
+  </head>
+  <body class="admin-body">
+    <div class="admin-shell">
+      <aside class="sidebar">
+        <a class="brand" href="index.html">
+          <span class="logo" aria-hidden="true"></span>
+          <span>主页后台</span>
+        </a>
+        <nav aria-label="后台导航">
+          <a href="#overview">统计概览</a>
+          <a href="#brand">品牌信息</a>
+          <a href="#profile">个人资料</a>
+          <a href="#hero">首屏文案</a>
+          <a href="#works">作品管理</a>
+          <a href="#contact">联系方式</a>
+        </nav>
+        <p class="help-text">所有修改将保存在浏览器本地存储中，前台会立即读取更新后的内容。</p>
+      </aside>
+
+      <main class="admin-main">
+        <div class="admin-topbar">
+          <div>
+            <div class="eyebrow">Admin Dashboard</div>
+            <h1>个人主页内容管理后台</h1>
+            <p>集中管理 LOGO、头像、昵称、导航、作品、经历、联系方式和 SEO 信息。</p>
+          </div>
+          <a class="btn secondary" href="index.html" target="_blank" rel="noopener noreferrer">打开前台</a>
+        </div>
+
+
+        <section class="dashboard-section" id="overview" aria-labelledby="overview-title">
+          <div>
+            <div class="eyebrow">Overview</div>
+            <h2 id="overview-title">后台统计概览</h2>
+            <p>实时统计当前主页内容规模、资料完整度与本机前台访问次数。</p>
+          </div>
+          <div class="metric-grid" data-dashboard-metrics></div>
+          <ul class="insight-list" data-dashboard-insights></ul>
+        </section>
+
+        <div class="editor-grid">
+          <form class="form-sections" data-admin-form>
+            <section class="form-section" id="brand">
+              <h2>品牌与导航</h2>
+              <div class="form-grid">
+                <label class="field"><span>站点名称</span><input data-path="brand.siteName" /></label>
+                <label class="field"><span>LOGO 地址 / Data URL</span><input data-path="brand.logo" /></label>
+              </div>
+              <h3>导航菜单</h3>
+              <div class="repeat-list" data-repeat="nav" data-title="导航"></div>
+            </section>
+
+            <section class="form-section" id="profile">
+              <h2>个人资料</h2>
+              <div class="form-grid">
+                <label class="field"><span>头像地址 / Data URL</span><input data-path="profile.avatar" /></label>
+                <label class="field"><span>昵称</span><input data-path="profile.nickname" /></label>
+                <label class="field"><span>身份标题</span><input data-path="profile.title" /></label>
+                <label class="field"><span>所在地</span><input data-path="profile.location" /></label>
+                <label class="field full"><span>个人简介</span><textarea data-path="profile.bio"></textarea></label>
+              </div>
+              <h3>个人标签</h3>
+              <div class="field" data-chips="tags"></div>
+              <h3>技能清单</h3>
+              <div class="field" data-chips="skills"></div>
+            </section>
+
+            <section class="form-section" id="hero">
+              <h2>首屏文案</h2>
+              <div class="form-grid">
+                <label class="field"><span>眉标</span><input data-path="hero.eyebrow" /></label>
+                <label class="field"><span>主按钮文字</span><input data-path="hero.primaryCta.label" /></label>
+                <label class="field"><span>主按钮链接</span><input data-path="hero.primaryCta.target" /></label>
+                <label class="field"><span>次按钮文字</span><input data-path="hero.secondaryCta.label" /></label>
+                <label class="field"><span>次按钮链接</span><input data-path="hero.secondaryCta.target" /></label>
+                <label class="field full"><span>大标题</span><textarea data-path="hero.headline"></textarea></label>
+                <label class="field full"><span>描述</span><textarea data-path="hero.description"></textarea></label>
+              </div>
+            </section>
+
+            <section class="form-section">
+              <h2>数据亮点</h2>
+              <div class="repeat-list" data-repeat="stats" data-title="数据"></div>
+            </section>
+
+            <section class="form-section" id="works">
+              <h2>作品管理</h2>
+              <p class="help-text">封面可填写 CSS 渐变，例如 linear-gradient(...)，也可扩展为图片地址。</p>
+              <div class="repeat-list" data-repeat="works" data-title="作品"></div>
+            </section>
+
+            <section class="form-section">
+              <h2>经历时间线</h2>
+              <div class="repeat-list" data-repeat="timeline" data-title="经历"></div>
+            </section>
+
+            <section class="form-section" id="contact">
+              <h2>联系方式与社交链接</h2>
+              <div class="form-grid">
+                <label class="field"><span>邮箱</span><input data-path="contact.email" /></label>
+                <label class="field"><span>电话</span><input data-path="contact.phone" /></label>
+                <label class="field"><span>微信</span><input data-path="contact.wechat" /></label>
+              </div>
+              <h3>社交平台</h3>
+              <div class="repeat-list" data-repeat="socials" data-title="社交链接"></div>
+            </section>
+
+            <section class="form-section">
+              <h2>SEO 信息</h2>
+              <div class="form-grid">
+                <label class="field"><span>页面标题</span><input data-path="seo.title" /></label>
+                <label class="field full"><span>页面描述</span><textarea data-path="seo.description"></textarea></label>
+              </div>
+            </section>
+
+            <div class="actions">
+              <button class="btn" type="submit">保存并发布</button>
+              <button class="btn secondary" type="button" data-reset>恢复默认</button>
+              <button class="btn secondary" type="button" data-export>导出 JSON</button>
+              <label class="btn secondary">导入 JSON<input data-import type="file" accept="application/json" hidden /></label>
+              <span class="status" data-status role="status"></span>
+            </div>
+          </form>
+
+          <aside class="preview-card">
+            <h2>实时预览</h2>
+            <p>保存或编辑字段后，右侧 iframe 会刷新展示前台效果。</p>
+            <div class="preview-phone">
+              <iframe data-preview src="index.html" title="前台实时预览"></iframe>
+            </div>
+          </aside>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

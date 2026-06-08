@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="780" viewBox="0 0 1200 780" role="img" aria-labelledby="title desc">
+  <title id="title">个人主页系统预览图</title>
+  <desc id="desc">展示可管理个人主页前台与后台内容管理面板的组合预览图。</desc>
+  <defs>
+    <linearGradient id="pageBg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#eff6ff"/>
+      <stop offset="0.45" stop-color="#f8fafc"/>
+      <stop offset="1" stop-color="#f5f3ff"/>
+    </linearGradient>
+    <linearGradient id="primary" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#2563eb"/>
+      <stop offset="1" stop-color="#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="orange" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f97316"/>
+      <stop offset="1" stop-color="#ec4899"/>
+    </linearGradient>
+    <linearGradient id="green" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#059669"/>
+      <stop offset="1" stop-color="#0ea5e9"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="24" stdDeviation="24" flood-color="#0f172a" flood-opacity="0.16"/>
+    </filter>
+    <style>
+      .label{font:700 20px ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#0f172a}
+      .text{font:500 16px ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#475569}
+      .small{font:700 13px ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#2563eb;letter-spacing:1px}
+      .tiny{font:600 12px ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#64748b}
+      .white{fill:#fff}.muted{fill:#94a3b8}.dark{fill:#0f172a}.line{stroke:#e2e8f0;stroke-width:1}
+    </style>
+  </defs>
+
+  <rect width="1200" height="780" rx="36" fill="url(#pageBg)"/>
+  <circle cx="120" cy="105" r="125" fill="#bfdbfe" opacity="0.42"/>
+  <circle cx="1060" cy="90" r="155" fill="#ddd6fe" opacity="0.52"/>
+
+  <text x="52" y="60" class="label" font-size="28">Managed Personal Homepage</text>
+  <text x="52" y="88" class="text">前台展示 + 后台统一管理 LOGO、头像、昵称、作品、联系方式等源信息</text>
+
+  <!-- Frontend preview -->
+  <g transform="translate(52 125)" filter="url(#shadow)">
+    <rect width="705" height="585" rx="30" fill="#ffffff"/>
+    <rect width="705" height="74" rx="30" fill="#ffffff"/>
+    <line x1="0" y1="74" x2="705" y2="74" class="line"/>
+    <rect x="30" y="22" width="34" height="34" rx="11" fill="url(#primary)"/>
+    <path d="M39 44c9 9 17 9 26 0M41 35h22" stroke="#fff" stroke-width="4" stroke-linecap="round" fill="none"/>
+    <text x="78" y="45" class="label" font-size="17">个人品牌主页</text>
+    <text x="365" y="44" class="tiny">首页</text>
+    <text x="420" y="44" class="tiny">作品</text>
+    <text x="475" y="44" class="tiny">经历</text>
+    <text x="530" y="44" class="tiny">联系</text>
+    <rect x="595" y="18" width="82" height="38" rx="19" fill="#2563eb"/>
+    <text x="611" y="42" font="700 13px sans-serif" fill="#fff">后台管理</text>
+
+    <g transform="translate(34 120)">
+      <text x="0" y="0" class="small">可配置个人主页系统</text>
+      <text x="0" y="58" font="800 48px sans-serif" fill="#111827">把你的个人品牌内容</text>
+      <text x="0" y="112" font="800 48px sans-serif" fill="#111827">交给后台统一管理</text>
+      <text x="0" y="150" class="text">无需修改代码，即可维护主页源信息、个人资料、精选作品、技能、履历和联系方式。</text>
+      <rect x="0" y="190" width="98" height="42" rx="21" fill="#2563eb"/>
+      <text x="22" y="217" font="700 14px sans-serif" fill="#fff">查看作品</text>
+      <rect x="112" y="190" width="98" height="42" rx="21" fill="#f8fafc" stroke="#e2e8f0"/>
+      <text x="134" y="217" font="700 14px sans-serif" fill="#0f172a">进入后台</text>
+    </g>
+
+    <g transform="translate(452 112)">
+      <rect width="236" height="270" rx="28" fill="#f8fafc" stroke="#e2e8f0"/>
+      <rect x="24" y="24" width="76" height="76" rx="22" fill="#dbeafe"/>
+      <circle cx="62" cy="53" r="18" fill="#2563eb"/>
+      <path d="M32 91c8-21 21-30 38-30s30 9 38 30" fill="#2563eb" opacity="0.92"/>
+      <text x="24" y="132" class="label" font-size="23">Lin Studio</text>
+      <text x="24" y="158" font="700 14px sans-serif" fill="#2563eb">独立设计师 / 全栈创作者</text>
+      <text x="24" y="185" class="tiny">上海 · 可远程协作</text>
+      <rect x="24" y="210" width="58" height="25" rx="12" fill="#eef2ff"/>
+      <text x="36" y="227" font="700 11px sans-serif" fill="#3730a3">品牌设计</text>
+      <rect x="90" y="210" width="68" height="25" rx="12" fill="#eef2ff"/>
+      <text x="104" y="227" font="700 11px sans-serif" fill="#3730a3">Web 开发</text>
+      <rect x="24" y="243" width="64" height="25" rx="12" fill="#eef2ff"/>
+      <text x="36" y="260" font="700 11px sans-serif" fill="#3730a3">作品集</text>
+    </g>
+
+    <g transform="translate(34 430)">
+      <text x="0" y="0" class="small">精选作品</text>
+      <text x="0" y="34" class="label" font-size="27">可由后台维护的作品集</text>
+      <g transform="translate(0 60)">
+        <rect width="205" height="124" rx="18" fill="#fff" stroke="#e2e8f0"/>
+        <rect width="205" height="60" rx="18" fill="url(#primary)"/>
+        <text x="18" y="92" class="label" font-size="15">品牌官网改版</text>
+      </g>
+      <g transform="translate(225 60)">
+        <rect width="205" height="124" rx="18" fill="#fff" stroke="#e2e8f0"/>
+        <rect width="205" height="60" rx="18" fill="url(#orange)"/>
+        <text x="18" y="92" class="label" font-size="15">个人 IP 视觉系统</text>
+      </g>
+      <g transform="translate(450 60)">
+        <rect width="205" height="124" rx="18" fill="#fff" stroke="#e2e8f0"/>
+        <rect width="205" height="60" rx="18" fill="url(#green)"/>
+        <text x="18" y="92" class="label" font-size="15">作品集后台模板</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Admin preview -->
+  <g transform="translate(790 125)" filter="url(#shadow)">
+    <rect width="358" height="585" rx="30" fill="#0f172a"/>
+    <rect x="18" y="18" width="74" height="549" rx="22" fill="#111827"/>
+    <rect x="34" y="35" width="32" height="32" rx="10" fill="url(#primary)"/>
+    <rect x="30" y="96" width="54" height="22" rx="11" fill="#1e293b"/>
+    <rect x="30" y="132" width="54" height="22" rx="11" fill="#1e293b"/>
+    <rect x="30" y="168" width="54" height="22" rx="11" fill="#2563eb" opacity="0.55"/>
+    <rect x="112" y="18" width="328" height="549" rx="24" fill="#f8fafc"/>
+    <text x="136" y="58" class="small">ADMIN DASHBOARD</text>
+    <text x="136" y="92" class="label" font-size="26">个人主页内容管理后台</text>
+    <text x="136" y="119" class="tiny">集中管理 LOGO、头像、昵称、作品、经历、联系方式和 SEO 信息。</text>
+
+    <g transform="translate(136 142)">
+      <rect width="190" height="118" rx="18" fill="#fff" stroke="#e2e8f0"/>
+      <text x="18" y="29" class="label" font-size="17">后台统计概览</text>
+      <rect x="18" y="44" width="78" height="44" rx="12" fill="#eff6ff"/>
+      <text x="28" y="62" font="700 10px sans-serif" fill="#2563eb">访问次数</text>
+      <text x="28" y="80" font="800 18px sans-serif" fill="#0f172a">128</text>
+      <rect x="106" y="44" width="72" height="44" rx="12" fill="#eef2ff"/>
+      <text x="116" y="62" font="700 10px sans-serif" fill="#3730a3">完整度</text>
+      <text x="116" y="80" font="800 18px sans-serif" fill="#0f172a">92%</text>
+      <text x="18" y="105" class="tiny">作品 3 · 技能 6 · 联系方式 6</text>
+    </g>
+
+    <g transform="translate(136 280)">
+      <rect width="190" height="165" rx="18" fill="#fff" stroke="#e2e8f0"/>
+      <text x="18" y="30" class="label" font-size="17">作品管理</text>
+      <rect x="18" y="48" width="154" height="36" rx="10" fill="#f8fafc" stroke="#e2e8f0"/>
+      <rect x="18" y="94" width="154" height="36" rx="10" fill="#f8fafc" stroke="#e2e8f0"/>
+      <rect x="18" y="140" width="64" height="24" rx="12" fill="#2563eb"/>
+      <text x="35" y="157" font="700 11px sans-serif" fill="#fff">新增</text>
+    </g>
+
+    <g transform="translate(136 492)">
+      <rect width="80" height="34" rx="17" fill="#2563eb"/>
+      <text x="19" y="22" font="700 12px sans-serif" fill="#fff">保存发布</text>
+      <rect x="92" width="78" height="34" rx="17" fill="#fff" stroke="#e2e8f0"/>
+      <text x="116" y="22" font="700 12px sans-serif" fill="#0f172a">导出</text>
+    </g>
+  </g>
+</svg>
