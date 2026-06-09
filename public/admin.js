@@ -1,6 +1,6 @@
 const STORAGE_KEY = 'managed-homepage-content';
 const META_STORAGE_KEY = 'managed-homepage-admin-meta';
-const VIEW_STATS_KEY = 'managed-homepage-view-stats';<<<<<<< codex-s2uu31
+const VIEW_STATS_KEY = 'managed-homepage-view-stats';
 const THEME_STORAGE_KEY = 'managed-homepage-admin-theme';
 
 
@@ -54,8 +54,11 @@ function getByPath(object, path) {
 function setByPath(object, path, value) {
   const keys = path.split('.');
   const last = keys.pop();
-  const target = keys.reduce((current, key) => current[key], object);
-  target[last] = value;
+  const target = keys.reduce((current, key) => {
+    if (current && typeof current === 'object') return current[key];
+    return undefined;
+  }, object);
+  if (target && typeof target === 'object') target[last] = value;
 }
 
 
