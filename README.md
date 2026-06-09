@@ -7,7 +7,11 @@
 ## 功能
 
 - 前台个人主页：品牌 LOGO、导航、首屏介绍、个人资料、数据亮点、技能、作品、经历和联系方式。
+
+- 后台管理面板：综合参考 AdminBeautify 的 Material Design 3 后台风格与 huashu-design 的高保真/评审/Tweaks 理念，可编辑 LOGO、头像、昵称、作品、社交链接、SEO 等所有主要展示内容，并提供内容统计概览。
+
 - 后台管理面板：可编辑 LOGO、头像、昵称、作品、社交链接、SEO 等所有主要展示内容，并提供内容统计概览。
+
 - 实时预览：后台内置移动端风格 iframe 预览。
 - 内容导入导出：支持导出 JSON，也支持导入 JSON 复用内容。
 - 无第三方依赖：使用原生 HTML、CSS、JavaScript 和 Node.js 静态服务器。
@@ -22,6 +26,11 @@ npm start
 
 - 前台：http://localhost:4173/
 - 后台：http://localhost:4173/admin.html
+
+
+## 后台设计参考
+
+后台视觉综合参考 AdminBeautify 的 Material Design 3 方向和 huashu-design 的高保真 HTML 原生设计理念，加入胶囊导航、玻璃拟态卡片、7 种主题色、亮色/暗色模式、圆角卡片、柔和过渡动画、参数化 Tweaks 与五维设计评审。
 
 ## 访问统计说明
 

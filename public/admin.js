@@ -1,6 +1,9 @@
 const STORAGE_KEY = 'managed-homepage-content';
 const META_STORAGE_KEY = 'managed-homepage-admin-meta';
-const VIEW_STATS_KEY = 'managed-homepage-view-stats';
+const VIEW_STATS_KEY = 'managed-homepage-view-stats';<<<<<<< codex-s2uu31
+const THEME_STORAGE_KEY = 'managed-homepage-admin-theme';
+
+
 const statusEl = document.querySelector('[data-status]');
 const form = document.querySelector('[data-admin-form]');
 let content = null;
@@ -65,6 +68,47 @@ function readStoredJson(key, fallback) {
   }
 }
 
+
+
+function readAdminTheme() {
+  return readStoredJson(THEME_STORAGE_KEY, { theme: 'blue', mode: 'light' });
+}
+
+function applyAdminTheme(settings) {
+  const theme = settings.theme || 'blue';
+  const mode = settings.mode === 'dark' ? 'dark' : 'light';
+  document.body.classList.remove('theme-blue', 'theme-purple', 'theme-cyan', 'theme-green', 'theme-orange', 'theme-pink', 'theme-red', 'dark-mode');
+  document.body.classList.add(`theme-${theme}`);
+  document.body.classList.toggle('dark-mode', mode === 'dark');
+  document.querySelectorAll('[data-theme]').forEach((button) => {
+    button.classList.toggle('active', button.dataset.theme === theme);
+  });
+  const modeToggle = document.querySelector('[data-mode-toggle]');
+  if (modeToggle) modeToggle.textContent = mode === 'dark' ? '亮色模式' : '暗色模式';
+}
+
+function saveAdminTheme(settings) {
+  localStorage.setItem(THEME_STORAGE_KEY, JSON.stringify(settings));
+  applyAdminTheme(settings);
+}
+
+function initAdminTheme() {
+  let settings = readAdminTheme();
+  applyAdminTheme(settings);
+  document.querySelectorAll('[data-theme]').forEach((button) => {
+    button.addEventListener('click', () => {
+      settings = { ...settings, theme: button.dataset.theme };
+      saveAdminTheme(settings);
+    });
+  });
+  document.querySelector('[data-mode-toggle]')?.addEventListener('click', () => {
+    settings = { ...settings, mode: settings.mode === 'dark' ? 'light' : 'dark' };
+    saveAdminTheme(settings);
+  });
+}
+
+
+
 function formatDateTime(value) {
   if (!value) return '暂无记录';
   return new Intl.DateTimeFormat('zh-CN', {
@@ -106,6 +150,36 @@ function metricCard(label, value, helper) {
   return card;
 }
 
+
+
+function scoreDesignReview(completion, works, activeContacts) {
+  return [
+    ['内容完整度', completion, '核心资料与 SEO 字段覆盖率'],
+    ['视觉层级', Math.min(100, 58 + (content.brand.nav || []).length * 7 + (content.stats || []).length * 5), '导航、数据与章节结构'],
+    ['功能性', Math.min(100, 52 + activeContacts * 8 + works.length * 3), '联系方式、作品链接与发布动作'],
+    ['一致性', Math.min(100, 64 + (content.profile.tags || []).length * 4 + (content.skills || []).length * 2), '标签、技能和品牌叙事统一度'],
+    ['创新性', Math.min(100, 62 + works.filter((work) => filled(work.cover)).length * 6), '封面表达与作品差异化']
+  ];
+}
+
+function updateDesignReview(completion, works, activeContacts) {
+  const review = document.querySelector('[data-design-review]');
+  if (!review) return;
+  review.innerHTML = '';
+  scoreDesignReview(completion, works, activeContacts).forEach(([label, score, helper]) => {
+    const item = document.createElement('div');
+    item.className = 'review-row';
+    item.innerHTML = `
+      <div><strong>${label}</strong><small>${helper}</small></div>
+      <span>${score}</span>
+      <i style="--score:${score}%"></i>
+    `;
+    review.appendChild(item);
+  });
+}
+
+
+
 function updateDashboardStats() {
   const metrics = document.querySelector('[data-dashboard-metrics]');
   const insights = document.querySelector('[data-dashboard-insights]');
@@ -127,6 +201,11 @@ function updateDashboardStats() {
     ['导航菜单', (content.brand.nav || []).length, '前台顶部导航项'],
     ['联系方式', activeContacts, '邮箱、电话、微信与社交链接']
   ].forEach(([label, value, helper]) => metrics.appendChild(metricCard(label, value, helper)));
+
+
+  updateDesignReview(completion, works, activeContacts);
+
+
 
   const linkedWorks = works.filter((work) => filled(work.link) && work.link !== '#').length;
   insights.innerHTML = '';
@@ -291,6 +370,10 @@ function importContent(file) {
 }
 
 async function init() {
+
+  initAdminTheme();
+
+
   const defaults = await loadDefaultContent();
   const saved = localStorage.getItem(STORAGE_KEY);
   try {

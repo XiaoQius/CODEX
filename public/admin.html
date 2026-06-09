@@ -7,6 +7,28 @@
     <link rel="stylesheet" href="styles.css" />
     <script defer src="admin.js"></script>
   </head>
+  <body class="admin-body theme-blue">
+    <div class="admin-shell">
+      <aside class="sidebar">
+        <a class="brand admin-brand" href="index.html">
+          <span class="logo" aria-hidden="true"></span>
+          <span>
+            <strong>主页后台</strong>
+            <small>Material Console</small>
+          </span>
+        </a>
+        <nav class="admin-nav" aria-label="后台导航">
+          <a href="#overview"><span aria-hidden="true">◉</span>统计概览</a>
+          <a href="#brand"><span aria-hidden="true">◆</span>品牌信息</a>
+          <a href="#profile"><span aria-hidden="true">●</span>个人资料</a>
+          <a href="#hero"><span aria-hidden="true">✦</span>首屏文案</a>
+          <a href="#works"><span aria-hidden="true">▣</span>作品管理</a>
+          <a href="#contact"><span aria-hidden="true">✉</span>联系方式</a>
+        </nav>
+        <div class="sidebar-card">
+          <span>MD3 风格</span>
+          <strong>圆角 · 主题色 · 暗色模式</strong>
+        </div>
   <body class="admin-body">
     <div class="admin-shell">
       <aside class="sidebar">
@@ -32,7 +54,25 @@
             <h1>个人主页内容管理后台</h1>
             <p>集中管理 LOGO、头像、昵称、导航、作品、经历、联系方式和 SEO 信息。</p>
           </div>
+          <div class="topbar-actions">
+            <div class="theme-panel" aria-label="后台主题设置">
+              <span>主题</span>
+              <div class="theme-dots" data-theme-picker>
+                <button type="button" class="theme-dot theme-blue" data-theme="blue" aria-label="蓝色主题"></button>
+                <button type="button" class="theme-dot theme-purple" data-theme="purple" aria-label="紫色主题"></button>
+                <button type="button" class="theme-dot theme-cyan" data-theme="cyan" aria-label="青色主题"></button>
+                <button type="button" class="theme-dot theme-green" data-theme="green" aria-label="绿色主题"></button>
+                <button type="button" class="theme-dot theme-orange" data-theme="orange" aria-label="橙色主题"></button>
+                <button type="button" class="theme-dot theme-pink" data-theme="pink" aria-label="粉色主题"></button>
+                <button type="button" class="theme-dot theme-red" data-theme="red" aria-label="红色主题"></button>
+              </div>
+            </div>
+            <button class="btn secondary mode-toggle" type="button" data-mode-toggle>暗色模式</button>
+            <a class="btn secondary" href="index.html" target="_blank" rel="noopener noreferrer">打开前台</a>
+          </div>
+
           <a class="btn secondary" href="index.html" target="_blank" rel="noopener noreferrer">打开前台</a>
+
         </div>
 
 
@@ -40,9 +80,23 @@
           <div>
             <div class="eyebrow">Overview</div>
             <h2 id="overview-title">后台统计概览</h2>
+
+            <p>实时统计当前主页内容规模、资料完整度与本机前台访问次数，并采用参考主题的 MD3 数据卡片风格。</p>
+          </div>
+          <div class="metric-grid" data-dashboard-metrics></div>
+          <div class="design-review" aria-label="五维设计评审">
+            <div>
+              <span class="review-kicker">Huashu Review</span>
+              <h3>五维设计评审</h3>
+              <p>参考 huashu-design 的 5 维评审思路，把内容完整度、视觉层级、功能性、一致性与创新性转成可操作评分。</p>
+            </div>
+            <div class="review-bars" data-design-review></div>
+          </div>
+
             <p>实时统计当前主页内容规模、资料完整度与本机前台访问次数。</p>
           </div>
           <div class="metric-grid" data-dashboard-metrics></div>
+
           <ul class="insight-list" data-dashboard-insights></ul>
         </section>
 
