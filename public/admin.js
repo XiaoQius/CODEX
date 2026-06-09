@@ -1,7 +1,9 @@
 const STORAGE_KEY = 'managed-homepage-content';
 const META_STORAGE_KEY = 'managed-homepage-admin-meta';
-const VIEW_STATS_KEY = 'managed-homepage-view-stats';
+const VIEW_STATS_KEY = 'managed-homepage-view-stats';<<<<<<< codex-s2uu31
 const THEME_STORAGE_KEY = 'managed-homepage-admin-theme';
+
+
 const statusEl = document.querySelector('[data-status]');
 const form = document.querySelector('[data-admin-form]');
 let content = null;
@@ -67,6 +69,7 @@ function readStoredJson(key, fallback) {
 }
 
 
+
 function readAdminTheme() {
   return readStoredJson(THEME_STORAGE_KEY, { theme: 'blue', mode: 'light' });
 }
@@ -103,6 +106,8 @@ function initAdminTheme() {
     saveAdminTheme(settings);
   });
 }
+
+
 
 function formatDateTime(value) {
   if (!value) return '暂无记录';
@@ -146,6 +151,7 @@ function metricCard(label, value, helper) {
 }
 
 
+
 function scoreDesignReview(completion, works, activeContacts) {
   return [
     ['内容完整度', completion, '核心资料与 SEO 字段覆盖率'],
@@ -172,6 +178,8 @@ function updateDesignReview(completion, works, activeContacts) {
   });
 }
 
+
+
 function updateDashboardStats() {
   const metrics = document.querySelector('[data-dashboard-metrics]');
   const insights = document.querySelector('[data-dashboard-insights]');
@@ -194,7 +202,10 @@ function updateDashboardStats() {
     ['联系方式', activeContacts, '邮箱、电话、微信与社交链接']
   ].forEach(([label, value, helper]) => metrics.appendChild(metricCard(label, value, helper)));
 
+
   updateDesignReview(completion, works, activeContacts);
+
+
 
   const linkedWorks = works.filter((work) => filled(work.link) && work.link !== '#').length;
   insights.innerHTML = '';
@@ -359,7 +370,10 @@ function importContent(file) {
 }
 
 async function init() {
+
   initAdminTheme();
+
+
   const defaults = await loadDefaultContent();
   const saved = localStorage.getItem(STORAGE_KEY);
   try {

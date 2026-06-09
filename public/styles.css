@@ -155,6 +155,7 @@ h1 { font-size: clamp(42px, 7vw, 76px); line-height: .96; letter-spacing: -0.07e
 .help-text { font-size: 13px; color: #64748b; line-height: 1.6; margin-top: 8px; }
 
 
+
 /* AdminBeautify-inspired Material Design 3 console */
 .admin-body {
   --md-primary: #2563eb;
@@ -286,6 +287,11 @@ h1 { font-size: clamp(42px, 7vw, 76px); line-height: .96; letter-spacing: -0.07e
   .hero, .split, .editor-grid, .admin-shell, .metric-grid, .insight-list, .design-review { grid-template-columns: 1fr; }
   .sidebar { position: static; height: auto; margin: 14px; }
   .admin-topbar, .topbar-actions { align-items: flex-start; flex-direction: column; }
+
+@media (max-width: 940px) {
+  .hero, .split, .editor-grid, .admin-shell, .metric-grid, .insight-list { grid-template-columns: 1fr; }
+  .sidebar { position: static; height: auto; }
+
   .work-grid, .contact-grid { grid-template-columns: 1fr; }
   .section-head { display: block; }
   .nav-links { display: none; }

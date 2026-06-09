@@ -29,6 +29,21 @@
           <span>MD3 风格</span>
           <strong>圆角 · 主题色 · 暗色模式</strong>
         </div>
+  <body class="admin-body">
+    <div class="admin-shell">
+      <aside class="sidebar">
+        <a class="brand" href="index.html">
+          <span class="logo" aria-hidden="true"></span>
+          <span>主页后台</span>
+        </a>
+        <nav aria-label="后台导航">
+          <a href="#overview">统计概览</a>
+          <a href="#brand">品牌信息</a>
+          <a href="#profile">个人资料</a>
+          <a href="#hero">首屏文案</a>
+          <a href="#works">作品管理</a>
+          <a href="#contact">联系方式</a>
+        </nav>
         <p class="help-text">所有修改将保存在浏览器本地存储中，前台会立即读取更新后的内容。</p>
       </aside>
 
@@ -55,6 +70,9 @@
             <button class="btn secondary mode-toggle" type="button" data-mode-toggle>暗色模式</button>
             <a class="btn secondary" href="index.html" target="_blank" rel="noopener noreferrer">打开前台</a>
           </div>
+
+          <a class="btn secondary" href="index.html" target="_blank" rel="noopener noreferrer">打开前台</a>
+
         </div>
 
 
@@ -62,6 +80,7 @@
           <div>
             <div class="eyebrow">Overview</div>
             <h2 id="overview-title">后台统计概览</h2>
+
             <p>实时统计当前主页内容规模、资料完整度与本机前台访问次数，并采用参考主题的 MD3 数据卡片风格。</p>
           </div>
           <div class="metric-grid" data-dashboard-metrics></div>
@@ -73,6 +92,11 @@
             </div>
             <div class="review-bars" data-design-review></div>
           </div>
+
+            <p>实时统计当前主页内容规模、资料完整度与本机前台访问次数。</p>
+          </div>
+          <div class="metric-grid" data-dashboard-metrics></div>
+
           <ul class="insight-list" data-dashboard-insights></ul>
         </section>
 
