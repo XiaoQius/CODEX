@@ -1,0 +1,75 @@
+{
+  "brand": {
+    "logo": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Crect width='120' height='120' rx='28' fill='%232563eb'/%3E%3Cpath d='M28 74c18 20 46 20 64 0M34 43h52M42 58h36' stroke='white' stroke-width='9' stroke-linecap='round' fill='none'/%3E%3C/svg%3E",
+    "siteName": "个人品牌主页",
+    "nav": [
+      { "label": "首页", "target": "#home" },
+      { "label": "作品", "target": "#works" },
+      { "label": "经历", "target": "#timeline" },
+      { "label": "联系", "target": "#contact" }
+    ]
+  },
+  "profile": {
+    "avatar": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'%3E%3Crect width='160' height='160' rx='80' fill='%23dbeafe'/%3E%3Ccircle cx='80' cy='62' r='30' fill='%232563eb'/%3E%3Cpath d='M34 139c8-32 28-48 46-48s38 16 46 48' fill='%232563eb'/%3E%3C/svg%3E",
+    "nickname": "Lin Studio",
+    "title": "独立设计师 / 全栈创作者",
+    "location": "上海 · 可远程协作",
+    "bio": "用产品思维打磨品牌、网站与数字体验。这个主页中的 LOGO、头像、昵称、作品、社交链接和履历都可以在后台统一管理。",
+    "tags": ["品牌设计", "Web 开发", "产品策略", "作品集"]
+  },
+  "hero": {
+    "eyebrow": "可配置个人主页系统",
+    "headline": "把你的个人品牌内容交给后台统一管理",
+    "description": "无需修改代码，即可维护主页源信息、个人资料、精选作品、技能、履历和联系方式。",
+    "primaryCta": { "label": "查看作品", "target": "#works" },
+    "secondaryCta": { "label": "进入后台", "target": "admin.html" }
+  },
+  "stats": [
+    { "value": "36+", "label": "交付项目" },
+    { "value": "8 年", "label": "创作经验" },
+    { "value": "12", "label": "合作行业" }
+  ],
+  "skills": ["Figma", "HTML/CSS", "JavaScript", "Node.js", "品牌视觉", "内容运营"],
+  "works": [
+    {
+      "title": "品牌官网改版",
+      "category": "Web Design",
+      "cover": "linear-gradient(135deg, #2563eb, #7c3aed)",
+      "summary": "为科技公司重构官网信息架构与视觉体系，提升咨询转化。",
+      "link": "#"
+    },
+    {
+      "title": "个人 IP 视觉系统",
+      "category": "Branding",
+      "cover": "linear-gradient(135deg, #f97316, #ec4899)",
+      "summary": "从 LOGO、头像到社媒封面搭建统一识别系统。",
+      "link": "#"
+    },
+    {
+      "title": "作品集后台模板",
+      "category": "Product",
+      "cover": "linear-gradient(135deg, #059669, #0ea5e9)",
+      "summary": "支持内容编辑、草稿预览与快速发布的轻量管理方案。",
+      "link": "#"
+    }
+  ],
+  "timeline": [
+    { "period": "2024 - 至今", "title": "独立创作者", "description": "服务创业团队与个人品牌，提供从策略到落地的整套数字体验。" },
+    { "period": "2020 - 2024", "title": "产品设计负责人", "description": "负责 B2B SaaS 产品体验、设计系统与增长实验。" },
+    { "period": "2016 - 2020", "title": "前端工程师", "description": "参与多个 Web 平台研发，关注性能、可维护性与用户体验。" }
+  ],
+  "contact": {
+    "email": "hello@example.com",
+    "phone": "+86 138 0000 0000",
+    "wechat": "LinStudio",
+    "socials": [
+      { "label": "GitHub", "url": "https://github.com/" },
+      { "label": "Dribbble", "url": "https://dribbble.com/" },
+      { "label": "LinkedIn", "url": "https://www.linkedin.com/" }
+    ]
+  },
+  "seo": {
+    "title": "Lin Studio - 个人主页",
+    "description": "支持后台管理的个人主页和作品集系统。"
+  }
+}
